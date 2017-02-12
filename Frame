@@ -1,0 +1,40 @@
+package com.JackPhilbrick.game;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+
+import com.JackPhilbrick.game.graphics.Screen;
+
+public class Frame extends JFrame{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3337607183629530377L;
+
+	public Frame(){
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Snake");
+		setResizable(false);
+		
+		init();
+	}
+
+	public void init(){
+		setLayout(new GridLayout(1, 1, 0, 0));
+		
+		Screen s = new Screen();
+		add(s);
+		
+		pack();
+		
+		setLocationRelativeTo(null);
+		setVisible(true); 
+	}
+	
+	public static void main(String args[]){
+		new Frame();
+	}
+}
+
